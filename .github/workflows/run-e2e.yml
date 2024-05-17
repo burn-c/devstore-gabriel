@@ -9,12 +9,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: install Node.js
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
-        - name: install PNPM
+        - name: Install PNPM
         uses: pnpm/action-setup@v4
         with:
           version: 8
