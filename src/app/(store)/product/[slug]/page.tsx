@@ -12,8 +12,7 @@ interface ProductParams {
 
 async function getProduct(slug: string): Promise<Product> {
   const response = await api(`/products/${slug}`, {
-    // next: { revalidate: 60 * 60 },
-    cache: 'no-cache',
+    next: { revalidate: 60 * 60 }, // 1 hour,
   })
   const product = await response.json()
 
